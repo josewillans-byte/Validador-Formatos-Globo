@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validador Globo — V2</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><div><h1>Validador Globo</h1><p>Validação técnica de criativos — V2</p></div><button id="themeBtn" class="secondary">☀️ Modo claro</button></header>
+<main class="container">
+<section class="card"><div class="section-head"><div><h2>1. Selecione o formato</h2><p class="muted">Escolha o formato que será conferido.</p></div><button id="autoBtn" class="secondary">🔎 Sugerir formato pela dimensão</button></div>
+<div class="format-grid">
+<button class="format-card active" data-format="frameAd"><strong>FrameAd</strong><span>1920 × 1080 • até 990 KB</span></button>
+<button class="format-card" data-format="touchpointDesktop"><strong>Touchpoint Desktop</strong><span>1920 × 100 • JPG/PNG</span></button>
+<button class="format-card" data-format="touchpointMobile"><strong>Touchpoint Mobile</strong><span>430 × 140 • JPG/PNG</span></button>
+<button class="format-card" data-format="pauseAds"><strong>Pause Ads</strong><span>996 × 640 • PNG • até 900 KB</span></button>
+<button class="format-card" data-format="pauseAdsTakeover"><strong>Pause Ads Takeover</strong><span>1920 × 1080 • JPG • até 900 KB</span></button>
+</div></section>
+<section class="card"><div class="section-head"><div><h2>2. Envie o criativo</h2><p class="muted">É possível validar uma ou várias imagens.</p></div><span class="local-pill">🔒 Processamento local</span></div>
+<div id="dropzone" class="dropzone"><div class="drop-icon">🖼️</div><h3>Arraste e solte os arquivos aqui</h3><p>ou</p><label class="primary" for="fileInput">Selecionar arquivo(s)</label><input id="fileInput" type="file" accept="image/*" multiple hidden><p class="hint">Os arquivos não são enviados para servidor. A validação acontece no navegador.</p></div>
+</section>
+<section id="batchCard" class="card hidden"><div class="result-head"><div><h2>Resumo da validação</h2><p id="batchSummary"></p></div><button id="clearBatch" class="secondary">Limpar</button></div><div id="batchResults" class="batch-results"></div></section>
+<section id="resultCard" class="card hidden"><div class="result-head"><div><h2>Detalhes da validação</h2><p id="fileName"></p></div><span id="overallBadge" class="badge"></span></div><div id="summary"></div><div id="checks" class="checks"></div>
+<div id="overlayTools" class="hidden"><h3>Pré-visualização e áreas de segurança</h3><div class="toolbar"><label><input type="checkbox" id="showSafe" checked> Área segura</label><label><input type="checkbox" id="showAttention" checked> Área de atenção</label><label><input type="checkbox" id="showCut" checked> Área de corte</label><label><input type="checkbox" id="showTv"> Elementos TV</label></div></div>
+<div class="preview-wrap"><canvas id="canvas"></canvas></div><div class="actions"><button id="copyBtn" class="primary">📋 Copiar resultado</button><button id="resetBtn" class="secondary">↩ Validar nova imagem</button></div>
+<p class="disclaimer">A ferramenta confere regras objetivas cadastradas. Posicionamento de logo, texto, CTA, contraste e demais critérios visuais devem ser revisados pelo operador quando não forem mensuráveis automaticamente.</p></section>
+<section class="card"><h2>Regras cadastradas</h2><div id="rules"></div></section>
+</main><script src="js/formatos.js"></script><script src="js/app.js"></script>
+</body></html>
