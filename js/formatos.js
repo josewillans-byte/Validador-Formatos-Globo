@@ -93,8 +93,13 @@ const FORMATOS = {
       "Dimensão: 1920 × 1080 px.",
       "Peso máximo: 900 KB.",
       "Arquivo JPG/JPEG.",
+      "Thumb/vídeo: 840 × 472 px, posição X84 Y524.",
+      "Margem de segurança do Thumb: 36 px em todos os lados.",
+      "QR Code: 265 × 375 px, posição X1571 Y701.",
+      "Margem de segurança do QR Code: 36 px em todos os lados.",
+      "TAG de referência: 92 × 24 px.",
       "Não inserir QR Code ou CTA na arte: esses elementos são gerados pelo produto.",
-      "Na TV, respeitar as regiões reservadas para QR Code e thumbnail/vídeo."
+      "A arte pode variar conforme o cliente, mas as áreas reservadas e suas margens devem ser respeitadas."
     ],
     overlay: "pauseAdsTakeover"
   }
